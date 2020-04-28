@@ -1,66 +1,154 @@
-/* Обертка которая обрезает все лишнее что выходит за ширину страници,
-к примеру если вы что то вытаскиваете марджинами то у вас появится горизонтальный скролл на странице, эта обертка его срезает
-+ если вы забыли указать position: relative; на нужном блоке, это ваша отправная точка для позиционирования,
-чтобы не трогать body
-эта обертка есть в каждом проекте */
-
-.wrapper {
-	overflow: hidden;
-	position: relative;
+body {
+    background-color: #3a454d;
 }
 
-/* Элемент который центрирует контент на странице (только центрирует) */
+@media (min-width: 320px) {
+    section {
+        margin: 38px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: #fff;
+        text-transform: uppercase;
+    }
 
-.container {
-	max-width: 1000px;
-	margin: 0 auto;
+    .head {
+        text-align: center;
+        width: 100%;
+    }
+
+    .head h2 {
+        display: inline-block;
+        font-size: 30px;
+        border-bottom: 4px solid #4e5a62;
+        padding-bottom: 9px;
+    }
+
+    .img {
+        position: relative;
+        width: 290px;
+        margin: 13px 15px;
+    }
+
+    .img img {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .img a {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(65, 61, 75, 0.35);;
+        opacity: 0;
+        transition: opacity .15s linear;
+    }
+
+    .img span:before {
+        content: "";
+        display: block;
+        background-color: #fff;
+        width: 18px;
+        height: 5px;
+    }
+
+    .img span:after {
+        content: "";
+        display: block;
+        background-color: #fff;
+        width: 18px;
+        height: 5px;
+        transform: rotate(90deg);
+        margin-top: -5px;
+    }
+
+    .img a:hover {
+        opacity: 1;
+    }
+
+    .img h3 {
+        background-color: #292f36;
+        margin: 0;
+        align-self: flex-end;
+        width: 100%;
+        padding: 22px 17px 19px;
+        font-size: 16px;
+    }
+
+    .btn-container {
+        width: 100%;
+        display: flex;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 15px 20px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        transition: background-color .15s linear;
+    }
+
+    .btn:hover {
+        background-color: #292f36;
+    }
 }
 
-/* Обертка для полей формы */
+@media (min-width: 768px) {
+    section {
+        width: 758px;
+        margin: 0 auto;
+    }
 
-.form-group {
-	margin-bottom: 15px;
+    .head {
+        text-align: left;
+        width: 738px;
+        margin: 34px auto;
+    }
+
+    .img {
+        width: 232px;
+        margin: 10px;
+    }
+
+    .img h3 {
+        font-size: 12px;
+    }
 }
 
-/* Поля формы */
+@media (min-width: 1200px) {
+    section {
+        width: 1175px;
+        margin: 85px auto;
+    }
 
-.form-control {
-	display: block;
-	width: 100%;
-	padding: 10px 15px;
-	border-color: #000;
-}
+    .head {
+        width: 1140px;
+    }
 
-.form-control:focus {
-	border-color: #ff0;
-}
+    .head h2 {
+        border-bottom: none;
+        border-left: 10px solid #4e5a62;
+        padding: 0 17px;
+        font-size: 36px;
+    }
 
-/* Стили для кроссбраузерности placeholder полей */
+    .img {
+        width: 360px;
+        margin: 15px;
+    }
 
-.form-control::-webkit-input-placeholder {
-	color: #f00;
-}
-
-.form-control::-moz-placeholder {
-	opacity: 1;
-	color: #f00;
-}
-
-.form-control:-ms-input-placeholder {
-	color: #f00;
-}
-
-.btn {
-	display: inline-block;
-	vertical-align: top;
-	padding: 10px 15px;
-	border-radius: 4px;
-	background-color: #000;
-	color: #fff;
-	text-decoration: none;
-	border: none;
-}
-
-.btn:hover {
-	background-color: #424242;
+    .img h3 {
+        font-size: 18px;
+    }
 }
