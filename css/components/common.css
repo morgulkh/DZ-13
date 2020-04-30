@@ -45,6 +45,7 @@ body {
         flex-wrap: wrap;
         position: absolute;
         justify-content: center;
+        padding: 13px 15px;
         top: 0;
         left: 0;
         width: 100%;
@@ -133,6 +134,10 @@ body {
         padding: 10px;
     }
 
+    .img a {
+        padding: 10px;
+    }
+
     .img h3 {
         font-size: 12px;
     }
@@ -153,6 +158,10 @@ body {
 
     .img {
         width: 33%;
+        padding: 15px;
+    }
+
+    .img a {
         padding: 15px;
     }
 
