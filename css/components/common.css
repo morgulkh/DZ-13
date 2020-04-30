@@ -25,9 +25,10 @@ body {
     }
 
     .img {
+        box-sizing: border-box;
         position: relative;
-        width: 290px;
-        margin: 13px 15px;
+        width: 100%;
+        padding: 13px 15px;
     }
 
     .img img {
@@ -53,22 +54,27 @@ body {
         transition: opacity .15s linear;
     }
 
-    .img span:before {
+    span:before {
+        position: absolute;
         content: "";
         display: block;
         background-color: #fff;
         width: 18px;
         height: 5px;
+        top: 50%;
+        left: 50%;
     }
 
-    .img span:after {
+    span:after {
+        position: absolute;
         content: "";
         display: block;
         background-color: #fff;
         width: 18px;
         height: 5px;
         transform: rotate(90deg);
-        margin-top: -5px;
+        top: 50%;
+        left: 50%;
     }
 
     .img a:hover {
@@ -104,21 +110,27 @@ body {
     }
 }
 
+@media (min-width: 576px) {
+    .img {
+        width: 50%;
+    }
+
+}
+
 @media (min-width: 768px) {
     section {
-        width: 758px;
+        min-width: 758px;
         margin: 0 auto;
     }
 
     .head {
         text-align: left;
-        width: 738px;
-        margin: 34px auto;
+        margin: 34px auto 34px 18px;
     }
 
     .img {
-        width: 232px;
-        margin: 10px;
+        width: 33%;
+        padding: 10px;
     }
 
     .img h3 {
@@ -128,12 +140,8 @@ body {
 
 @media (min-width: 1200px) {
     section {
-        width: 1175px;
-        margin: 85px auto;
-    }
-
-    .head {
-        width: 1140px;
+        width: 100%;
+        margin: 85px auto 85px 20px;
     }
 
     .head h2 {
@@ -144,8 +152,8 @@ body {
     }
 
     .img {
-        width: 360px;
-        margin: 15px;
+        width: 33%;
+        padding: 15px;
     }
 
     .img h3 {
