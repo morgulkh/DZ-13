@@ -4,6 +4,7 @@ body {
 
 @media (min-width: 320px) {
     section {
+        width: 100%;
         margin: 38px auto;
         display: flex;
         flex-wrap: wrap;
@@ -62,7 +63,7 @@ body {
         background-color: #fff;
         width: 18px;
         height: 5px;
-        top: 50%;
+        top: calc(50% - 40px);
         left: 50%;
     }
 
@@ -74,7 +75,7 @@ body {
         width: 18px;
         height: 5px;
         transform: rotate(90deg);
-        top: 50%;
+        top: calc(50% - 40px);
         left: 50%;
     }
 
@@ -145,13 +146,11 @@ body {
 
 @media (min-width: 1200px) {
     section {
-        width: 100%;
         margin: 85px auto;
     }
 
     .head h2 {
         border-bottom: none;
-        margin-left: 20px;
         border-left: 10px solid #4e5a62;
         padding: 0 17px;
         font-size: 36px;
