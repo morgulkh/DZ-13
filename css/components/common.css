@@ -2,121 +2,126 @@ body {
     background-color: #3a454d;
 }
 
-@media (min-width: 320px) {
-    section {
-        width: 100%;
-        margin: 38px auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        color: #fff;
-        text-transform: uppercase;
-    }
+section {
+    width: 100%;
+    margin: 38px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+}
 
-    .head {
-        text-align: center;
-        width: 100%;
-    }
+.head {
+    text-align: center;
+    width: 100%;
+}
 
-    .head h2 {
-        display: inline-block;
-        font-size: 30px;
-        border-bottom: 4px solid #4e5a62;
-        padding-bottom: 9px;
-    }
+.head h2 {
+    display: inline-block;
+    font-size: 30px;
+    border-bottom: 4px solid #4e5a62;
+    padding-bottom: 9px;
+}
 
-    .img {
-        box-sizing: border-box;
-        position: relative;
-        width: 100%;
-        padding: 13px 15px;
-    }
+.container {
+    padding: 13px 15px;
+}
 
-    .img img {
-        width: 100%;
-    }
+.img {
+    position: relative;
+    width: 100%;
+}
 
-    a {
-        text-decoration: none;
-        color: #fff;
-    }
+.img img {
+    width: 100%;
+}
 
-    .img a {
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;
-        justify-content: center;
-        padding: 13px 15px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(65, 61, 75, 0.35);;
-        opacity: 0;
-        transition: opacity .15s linear;
-    }
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
-    span:before {
-        position: absolute;
-        content: "";
-        display: block;
-        background-color: #fff;
-        width: 18px;
-        height: 5px;
-        top: calc(50% - 40px);
-        left: 50%;
-    }
+.img a {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 61, 75, 0.35);;
+    opacity: 0;
+    transition: opacity .15s linear;
+}
 
-    span:after {
-        position: absolute;
-        content: "";
-        display: block;
-        background-color: #fff;
-        width: 18px;
-        height: 5px;
-        transform: rotate(90deg);
-        top: calc(50% - 40px);
-        left: 50%;
-    }
+.img div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
 
-    .img a:hover {
-        opacity: 1;
-    }
+span:before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 20px;
+    height: 3px;
+    transform: translate(-50%);
+}
 
-    .img h3 {
-        background-color: #292f36;
-        margin: 0;
-        align-self: flex-end;
-        width: 100%;
-        padding: 22px 17px 19px;
-        font-size: 16px;
-    }
+span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 3px;
+    height: 20px;
+    transform: translate(-50%);
+    margin-top: -9px;
+}
 
-    .btn-container {
-        width: 100%;
-        display: flex;
-        padding-top: 40px;
-        justify-content: center;
-    }
+.img a:hover {
+    opacity: 1;
+}
 
-    .btn {
-        font-size: 14px;
-        padding: 15px 20px;
-        border: 2px solid #fff;
-        border-radius: 5px;
-        transition: background-color .15s linear;
-    }
+.img h3 {
+    background-color: #292f36;
+    margin: 0;
+    align-self: flex-end;
+    width: 100%;
+    padding: 22px 17px 19px;
+    font-size: 16px;
+}
 
-    .btn:hover {
-        background-color: #292f36;
-    }
+.btn-container {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 15px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color .15s linear;
+}
+
+.btn:hover {
+    background-color: #292f36;
 }
 
 @media (min-width: 576px) {
-    .img {
+    .container {
         width: 50%;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -130,12 +135,8 @@ body {
         margin: 34px auto 34px 18px;
     }
 
-    .img {
+    .container {
         width: 33%;
-        padding: 10px;
-    }
-
-    .img a {
         padding: 10px;
     }
 
@@ -147,6 +148,7 @@ body {
 @media (min-width: 1200px) {
     section {
         margin: 85px auto;
+        max-width: 1140px;
     }
 
     .head h2 {
@@ -156,12 +158,8 @@ body {
         font-size: 36px;
     }
 
-    .img {
+    .container {
         width: 33%;
-        padding: 15px;
-    }
-
-    .img a {
         padding: 15px;
     }
 
